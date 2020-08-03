@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_container"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Trip Name:"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/txt_tripname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="Enter Trip Name"
+                    android:includeFontPadding="false"
+                    android:inputType="textCapWords"
+                    android:lines="1"
+                    android:textColorHint="@color/TextColorBlack"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Origin:"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txt_origin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:text="Select From Map" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:text="Destination:"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txt_destination"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:includeFontPadding="false"
+                    android:lines="1"
+                    android:text="Select From Map" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Date:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableEnd="@drawable/icon_calendar_dark"
+                    android:drawablePadding="15dp"
+                    android:hint="MM/DD/YEAR" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Time of Day:"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <include layout="@layout/view_bullet_divider_dynamic" />
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_morning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="0"
+                        android:includeFontPadding="false"
+                        android:text="Morning"
+                        android:theme="@style/checkboxStyle" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_afternoon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_row="0"
+                        android:includeFontPadding="false"
+                        android:text="Afternoon"
+                        android:theme="@style/checkboxStyle" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_night"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="1"
+                        android:includeFontPadding="false"
+                        android:text="Evening"
+                        android:theme="@style/checkboxStyle" />
+
+                    <ImageView
+                        android:id="@+id/txt_allday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_gravity="center_vertical"
+                        android:layout_row="1"
+                        android:includeFontPadding="false"
+                        android:src="@drawable/btn_all_day"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+                </GridLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Estimate:"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txt_estimate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false" />
+
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-3dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Gender:"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spinner_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:theme="@style/checkboxStyle" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Seats:"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_available"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:visibility="visible">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_oval_red" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_small">
+
+                            <ImageView
+                                android:id="@+id/btn_seat_minus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:src="@drawable/btn_minus" />
+
+                            <TextView
+                                android:id="@+id/txt_seats"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:background="@drawable/bg_circle_red"
+                                android:gravity="center"
+                                android:maxLength="2"
+                                android:text="01"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_small"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/btn_seat_plus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:src="@drawable/btn_plus" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Book Now:"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_bookNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:button="@drawable/booknow_checkbox" />
+
+            </LinearLayout>
+
+
+            <com.seatus.Views.PreferencesViewOld
+                android:id="@+id/view_preference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/preferences_bg"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="Preferences:"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/switch_roundtrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="Round Trip"
+                android:theme="@style/checkboxStyle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.seatus.Views.RippleView
+                    android:id="@+id/btn_add_frnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_add_friends"
+                    app:rv_centered="true" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content" />
+
+                <com.seatus.Views.RippleView
+                    android:id="@+id/btn_continue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_continue_green"
+                    app:rv_centered="true"
+                    app:rv_color="@color/colorAccent" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

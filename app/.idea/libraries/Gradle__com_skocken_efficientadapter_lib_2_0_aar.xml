@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.skocken:efficientadapter.lib:2.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d9687d03e0f828ee5af28deda0b65637/efficientadapter.lib-2.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d9687d03e0f828ee5af28deda0b65637/efficientadapter.lib-2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d9687d03e0f828ee5af28deda0b65637/efficientadapter.lib-2.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.skocken/efficientadapter.lib/2.0/5b59b0b9f35d77a58a5e42922533c1740ac8a474/efficientadapter.lib-2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.skocken/efficientadapter.lib/2.0/a033d920e068d91eaa62e529f53ede144cd90ece/efficientadapter.lib-2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

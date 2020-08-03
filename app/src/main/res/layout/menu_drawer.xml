@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rb="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/bg_sidemenu"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btn_drawer_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/btn_info" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/logo_whereto"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_user"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_image_circle"
+            android:padding="2dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txt_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Micheal Brown"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_user_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="Boston, Massachusetts"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <android.support.v7.widget.AppCompatRatingBar
+                android:id="@+id/rating_user"
+                style="@style/smallRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="left"
+                android:isIndicator="true"
+                android:rating="4" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/bg_drawer_title">
+
+            <TextView
+                android:id="@+id/txt_drawer_title_usertype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lines="1"
+                android:text="PASSENGER MENU"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <CheckBox
+            android:id="@+id/checkbox_usertype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/selector_checkbox"
+            android:button="@null"
+            android:checked="true" />
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:id="@+id/layout_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/txt_find"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/icon_drawer_bullet"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:text="Find Ride"
+                android:textColor="@drawable/color_white_green" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/seperator_drawer"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_drawer_bullet"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:text="Create Trip"
+                android:textColor="@drawable/color_white_green"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/seperator_drawer" />
+
+            <TextView
+                android:id="@+id/txt_mytrips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_drawer_bullet"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:text="My Trips"
+                android:textColor="@drawable/color_white_green" />
+
+
+            <LinearLayout
+                android:id="@+id/layout_mytrip_types"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/seperator_drawer" />
+
+                <TextView
+                    android:id="@+id/txt_offers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="Pending Offers"
+                    android:textColor="@drawable/color_white_green"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txt_upcomming_trips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="Upcoming Trips"
+                    android:textColor="@drawable/color_white_green"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txt_pastt_rips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="5dp"
+                    android:text="Past Trips"
+                    android:textColor="@drawable/color_white_green"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/seperator_drawer" />
+
+            <TextView
+                android:id="@+id/txt_payments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_drawer_bullet"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:text="My Payments"
+                android:textColor="@drawable/color_white_green" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/seperator_drawer" />
+
+            <LinearLayout
+                android:id="@+id/txt_chat_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/icon_drawer_bullet"
+                    android:drawablePadding="5dp"
+                    android:padding="10dp"
+                    android:text="Messages / Chat"
+                    android:textColor="@drawable/color_white_green" />
+
+                <TextView
+                    android:id="@+id/txt_chat_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bg_badge"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLength="2"
+                    android:padding="2dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/seperator_drawer"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/txt_promotions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_drawer_bullet"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:text="Promotions"
+                android:textColor="@drawable/color_white_green"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/seperator_drawer" />
+
+            <LinearLayout
+                android:id="@+id/txt_notif_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/icon_drawer_bullet"
+                    android:drawablePadding="5dp"
+                    android:ems="9"
+                    android:padding="10dp"
+                    android:text="Notifications"
+                    android:textColor="@drawable/color_white_green" />
+
+                <TextView
+                    android:id="@+id/txt_notif_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bg_badge"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLength="2"
+                    android:padding="2dp"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/seperator_drawer" />
+
+            <TextView
+                android:id="@+id/txt_invite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_drawer_bullet"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:text="Invite Friends"
+                android:textColor="@drawable/color_white_green" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/seperator_drawer" />
+
+            <TextView
+                android:id="@+id/txt_contactus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_drawer_bullet"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:text="Contact Us"
+                android:textColor="@drawable/color_white_green" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/seperator_drawer" />
+
+            <TextView
+                android:id="@+id/txt_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_drawer_bullet"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:text="Logout"
+                android:textColor="@drawable/color_white_green" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

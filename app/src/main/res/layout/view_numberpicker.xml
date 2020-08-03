@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_oval_red" />
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_small">
+
+        <ImageView
+            android:id="@+id/btn_seat_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/btn_minus" />
+
+        <TextView
+            android:id="@+id/txt_seats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_circle_red"
+            android:gravity="center"
+            android:maxLength="2"
+            android:text="01"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btn_seat_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:src="@drawable/btn_plus" />
+    </LinearLayout>
+</FrameLayout>

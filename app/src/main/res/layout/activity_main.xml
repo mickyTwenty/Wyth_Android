@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.seatus.Views.TitleBar
+            android:id="@+id/view_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/colorAccent" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+            <FrameLayout
+                android:id="@+id/frame_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:indeterminate="true"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txt_driver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EE4525"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="You are in Driver interface"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/info_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <!--android:background="#98000000"-->
+
+        <ImageView
+            android:id="@+id/info_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="15dp"
+            android:src="@drawable/icon_delete_dark" />
+
+        <ImageView
+            android:id="@+id/info_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@drawable/info_posttrip" />
+
+    </FrameLayout>
+
+    <include
+        layout="@layout/menu_drawer"
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:layout_marginRight="-60dp" />
+
+
+</android.support.v4.widget.DrawerLayout>

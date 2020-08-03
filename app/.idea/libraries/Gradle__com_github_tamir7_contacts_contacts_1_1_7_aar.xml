@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.tamir7.contacts:contacts:1.1.7@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/23811207465159c5fe5fa670abbce3ab/contacts-1.1.7/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/23811207465159c5fe5fa670abbce3ab/contacts-1.1.7/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.tamir7.contacts/contacts/1.1.7/55560bb26fab1ea1c523019eb26f84090e4f1f13/contacts-1.1.7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.tamir7.contacts/contacts/1.1.7/f6f54872c9c2457193985d259e058a2c5ea323b/contacts-1.1.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

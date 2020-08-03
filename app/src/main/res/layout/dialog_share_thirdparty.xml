@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/popup_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/dialog_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dialog_header_addfriend"
+            android:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/dialog_progressbar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/dialog_title_changepass"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="18"
+        android:gravity="center_horizontal"
+        android:text="Enter the information with whom you want to Share your Itinerary"
+        android:textColor="#6b6b6b"
+        android:textStyle="italic|bold" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputlayout_firstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/TextColorBlack"
+        android:theme="@style/InputEditText_Light">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/field_firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:hint="First Name"
+            android:inputType="textPersonName"
+            android:maxLength="30"
+            android:textColorHint="@color/colorPrimaryText"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputlayout_lastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/TextColorBlack"
+        android:theme="@style/InputEditText_Light">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/field_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:hint="Last Name"
+            android:inputType="textPersonName"
+            android:maxLength="30"
+            android:textColorHint="@color/colorPrimaryText"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputlayout_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/TextColorBlack"
+        android:theme="@style/InputEditText_Light">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/field_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:maxLength="30"
+            android:textColorHint="@color/colorPrimaryText"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputlayout_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/TextColorBlack"
+        android:theme="@style/InputEditText_Light">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/field_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:hint="Phone"
+            android:inputType="phone"
+            android:maxLength="30"
+            android:textColorHint="@color/colorPrimaryText"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.seatus.Views.RippleView
+            android:id="@+id/btn_negative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_white_empty"
+            android:gravity="center"
+            app:rv_centered="true">
+
+            <TextView
+                android:id="@+id/txt_negative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </com.seatus.Views.RippleView>
+
+        <android.support.v4.widget.Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+
+        <com.seatus.Views.RippleView
+            android:id="@+id/btn_positive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_green_empty"
+            android:gravity="center"
+            app:rv_centered="true">
+
+            <TextView
+                android:id="@+id/txt_positive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invite"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </com.seatus.Views.RippleView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

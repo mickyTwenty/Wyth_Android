@@ -1,0 +1,1100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ll_fields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_container"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+
+            <LinearLayout
+                android:id="@+id/layout_driver_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/circleImageView"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/bg_image_circle" />
+
+                    <android.support.v7.widget.AppCompatRatingBar
+                        android:id="@+id/rating_driver"
+                        style="@style/smallRatingBarDark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="5dp"
+                        android:isIndicator="true" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Driver Name:"
+                            android:textSize="@dimen/text_medium"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_driver_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/TextColorBlack"
+                            android:textSize="@dimen/text_medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lines="1"
+                            android:text="License Plate No:"
+                            android:textSize="@dimen/text_medium"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_driver_licence"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:lines="1"
+                            android:text=""
+                            android:textColor="@color/TextColorBlack"
+                            android:textSize="@dimen/text_medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vehicle Type:"
+                            android:textSize="@dimen/text_medium"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_driver_vehicle_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/TextColorBlack"
+                            android:textSize="@dimen/text_medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rides Canceled:"
+                            android:textSize="@dimen/text_medium"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txt_driver_cancel_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:textColor="@color/TextColorBlack"
+                            android:textSize="@dimen/text_medium" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Trip ID:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_trip_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false" />
+
+
+                <TextView
+                    android:id="@+id/txt_ride_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:textColor="@color/colorAccent" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Origin:"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txt_origin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:maxLines="2" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Destination:"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txt_destination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:maxLines="2" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Date:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawablePadding="5dp" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Time of Day:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawablePadding="5dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <include layout="@layout/view_bullet_divider_dynamic" />
+
+                <GridLayout
+                    android:id="@+id/layout_timezone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:visibility="visible">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_morning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:clickable="false"
+                        android:includeFontPadding="false"
+                        android:text="Morning"
+                        android:theme="@style/checkboxStyle" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_afternoon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:clickable="false"
+                        android:includeFontPadding="false"
+                        android:text="Afternoon"
+                        android:theme="@style/checkboxStyle" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_night"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:clickable="false"
+                        android:includeFontPadding="false"
+                        android:text="Evening"
+                        android:theme="@style/checkboxStyle" />
+
+                </GridLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_return_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Return Date:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_date_returning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawablePadding="5dp" />
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/divider_return"
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layout_timezonetitle_returning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Time of Day (Returning):"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <include layout="@layout/view_bullet_divider_dynamic" />
+
+                <GridLayout
+                    android:id="@+id/layout_timezone_returning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_morning_return"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="0"
+                        android:clickable="false"
+                        android:includeFontPadding="false"
+                        android:text="Morning"
+                        android:theme="@style/checkboxStyle" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_afternoon_return"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:clickable="false"
+                        android:includeFontPadding="false"
+                        android:text="Afternoon"
+                        android:theme="@style/checkboxStyle" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_night_return"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:clickable="false"
+                        android:includeFontPadding="false"
+                        android:text="Evening"
+                        android:theme="@style/checkboxStyle" />
+
+                </GridLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_trip_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Trip Type:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_is_round"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawablePadding="5dp" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/ll_past_trip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bullet_icon_green" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:includeFontPadding="false"
+                        android:text="Estimate:"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/txt_estimate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:includeFontPadding="false" />
+
+                </LinearLayout>
+
+                <include
+                    layout="@layout/view_bullet_divider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bullet_icon_green" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:includeFontPadding="false"
+                        android:text="Distance:"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/txt_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:includeFontPadding="false" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <include
+                android:id="@+id/divider_seats"
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:id="@+id/layout_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Ride Status:"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Cancelled"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_seats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Seats:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_seats_count_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_available"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_seats_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/checkbox_available_seats_bar"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Available  "
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small" />
+
+                    <TextView
+                        android:id="@+id/txt_seats_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/checkbox_available_seats_circle_bg"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_unavailable"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/checkbox_filled_seats_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:text="Filled"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/checkbox_filled_seats_circle_bg"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/divider_seats_return"
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/layout_seats_return"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Return Seats:"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txt_return_seats_count_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false" />
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_available_return"
+                    android:layout_width="85dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/txt_seats_hint_return"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/checkbox_available_seats_bar"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Available  "
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small" />
+
+                    <TextView
+                        android:id="@+id/txt_seats_count_return"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/checkbox_available_seats_circle_bg"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_unavailable_return"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/checkbox_filled_seats_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:text="Filled"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/checkbox_filled_seats_circle_bg"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:id="@+id/divider_payment_option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/layout_payment_option"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Payment Option:"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txt_payment_option"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Standard" />
+
+            </LinearLayout>
+
+
+            <include
+                android:id="@+id/divider_sharedwith"
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/layout_sharedwith"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Shared Itinerary With:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_sharedwith"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="0 People" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:includeFontPadding="false"
+                    android:text="(View)"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+            <com.seatus.Views.RippleView
+                android:id="@+id/btn_view_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_view_map"
+                app:rv_centered="true"
+                app:rv_color="@color/colorAccent" />
+
+            <LinearLayout
+                android:id="@+id/layout_member_buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <com.seatus.Views.RippleView
+                        android:id="@+id/btn_seats_available"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_seat_available"
+                        app:rv_centered="true" />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content" />
+
+                    <com.seatus.Views.RippleView
+                        android:id="@+id/btn_group_chat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/btn_group_chat_dark"
+                        app:rv_centered="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.seatus.Views.RippleView
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/btn_green_cancel_ride"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:visibility="visible"
+                        app:rv_centered="true" />
+
+
+                    <com.seatus.Views.RippleView
+                        android:id="@+id/btn_share_itnerary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/btn_green_share_intenirary"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        app:rv_centered="true" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/btn_decide_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/selector_tab_selector"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Decide Trip Time"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/btn_rideflow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/selector_tab_selector"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Start Ride"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/btn_complete_payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/selector_tab_selector"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Complete Payment"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/layout_nonmember_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/btn_booknow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tab_selector"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Book Now"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/btn_offer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tab_selector"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Make Offer"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

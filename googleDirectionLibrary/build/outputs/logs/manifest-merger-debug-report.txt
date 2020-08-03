@@ -1,0 +1,41 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml:1:1-6:12
+INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml:1:1-6:12
+INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml:1:1-6:12
+INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml:1:1-6:12
+INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml:1:1-6:12
+INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml:1:1-6:12
+INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml:1:1-6:12
+	package
+		ADDED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml:2:5-45
+		INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml
+		INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml
+		ADDED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml:1:1-6:12
+		INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml
+		ADDED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml:1:1-6:12
+		INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml:4:5-67
+	android:name
+		ADDED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml:4:22-64
+uses-sdk
+INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml
+INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml
+INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml
+INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml
+		ADDED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml
+		INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml
+		ADDED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml
+		INJECTED from C:\Wyth\WythFinal\googleDirectionLibrary\src\main\AndroidManifest.xml

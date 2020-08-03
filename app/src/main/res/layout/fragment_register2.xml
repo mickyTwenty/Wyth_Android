@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="80dp"
+        android:paddingRight="30dp"
+        android:paddingTop="30dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_whereto"
+            android:visibility="gone" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_state"
+                android:drawablePadding="10dp"
+                android:focusable="false"
+                android:hint="State"
+                android:longClickable="false"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_city"
+                android:drawablePadding="10dp"
+                android:focusable="false"
+                android:hint="City"
+                android:inputType="none"
+                android:longClickable="false"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />]
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_zip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_zip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_zip"
+                android:drawablePadding="10dp"
+                android:hint="Zip"
+                android:inputType="number"
+                android:maxLength="100"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_yearofgrad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_yearofgrad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/icon_grad"
+                android:drawablePadding="5dp"
+                android:focusable="false"
+                android:hint="Year Of Graduation"
+                android:longClickable="false"
+                android:maxLength="4"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_gender"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/icon_dropdown_source"
+                android:focusable="false"
+                android:hint="How did you find us ?"
+                android:inputType="textCapWords"
+                android:longClickable="false"
+                android:maxLength="100"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/white">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/icon_pass"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLength="100"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_pass2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/white">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_pass2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/icon_pass"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:maxLength="100"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/checkbox_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:padding="10dp"
+            android:text="User Agreements (I Agree)"
+            android:textColor="@color/white" />
+
+        <com.seatus.Views.RippleView
+            android:id="@+id/btn_signup_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signup_user"
+            app:rv_centered="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/seperator_or" />
+
+        <com.seatus.Views.RippleView
+            android:id="@+id/btn_signup_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_signup_driver"
+            app:rv_centered="true" />
+
+    </LinearLayout>
+</ScrollView>

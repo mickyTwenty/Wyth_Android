@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#59BA49</color>
+    <color name="colorPrimaryDark">#4bb739</color>
+    <color name="colorAccent">#59BA49</color>
+    <color name="colorAccentOrange">#EE4525</color>
+
+
+    <!--  Text Colors !-->
+    <color name="colorPrimaryText">#393939</color>
+    <color name="colorPrimaryTextDark">#393939</color>
+    <color name="TextcolorLight">#c6c4c4</color>
+    <color name="SubTextColor">#abaaaa</color>
+    <color name="textcolorlightwhite">#FFFFFF</color>
+    <color name="TextColorBlack">#333333</color>
+
+    <!--  Flat Colors !-->
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#E9E9E9</color>
+    <color name="black">#111111</color>
+    <color name="opac_black">#be111111</color>
+    <color name="divider">#afaeae</color>
+    <color name="light_grey">#f1efef</color>
+
+    <color name="orange">#fd8700</color>
+    <color name="red">#f40000</color>
+    <color name="green">#03b600</color>
+    <color name="light_green">#9851df4f</color>
+    <color name="text_color_grey">#6b6b6b</color>
+
+</resources>

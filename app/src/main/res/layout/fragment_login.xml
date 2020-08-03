@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_signup" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputlayout_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/field_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_user"
+            android:drawablePadding="10dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:maxLength="100"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputlayout_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/white">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/field_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/icon_pass"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:maxLength="100"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkbox_remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:padding="5dp"
+            android:text="Remember me"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/btn_forgotpass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:text="Forgot Password?"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+    <com.seatus.Views.RippleView
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_login"
+        app:rv_centered="true" />
+
+
+    <com.seatus.Views.RippleView
+        android:id="@+id/btn_login_fb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:background="@drawable/btn_fb_login"
+        app:rv_centered="false" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/seperator_or" />
+
+    <com.seatus.Views.RippleView
+        android:id="@+id/btn_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_signup_user"
+        app:rv_centered="true" />
+
+</LinearLayout>

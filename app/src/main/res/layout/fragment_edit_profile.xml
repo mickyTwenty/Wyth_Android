@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_container"
+        android:padding="15dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="75dp"
+                android:layout_height="75dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circleImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/bg_image_circle"
+                    android:padding="3dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_img_edit" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/TextColorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.AppCompatRatingBar
+                style="@style/smallRatingBarDark"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:isIndicator="true"
+                android:rating="4"
+                android:visibility="gone" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_dark_birth_date"
+                    android:drawableRight="@drawable/icon_dropdown_arrow"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:hint="Date Of Birth"
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textColor="@color/TextColorBlack"
+                    android:textSize="14sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_dark_gender"
+                    android:drawableRight="@drawable/icon_dropdown_arrow"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:hint="Gender"
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textColor="@color/TextColorBlack"
+                    android:textSize="14sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_phoneNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_phoneNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_dark_phone"
+                    android:drawablePadding="10dp"
+                    android:hint="Phone Number"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="20"
+                    android:textColor="@color/TextColorBlack"
+                    android:textSize="14sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_dark_state"
+                    android:drawableRight="@drawable/icon_dropdown_arrow"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:hint="State"
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textColor="@color/TextColorBlack"
+                    android:textSize="14sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_dark_city"
+                    android:drawableRight="@drawable/icon_dropdown_arrow"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:hint="City"
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textColor="@color/TextColorBlack"
+                    android:textSize="14sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_zip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_zip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_dark_zip"
+                    android:drawablePadding="10dp"
+                    android:hint="Zip Code"
+                    android:inputType="number"
+                    android:textColor="@color/TextColorBlack"
+                    android:textSize="14sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_schoolName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_schoolName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_dark_state"
+                    android:drawableRight="@drawable/icon_dropdown_arrow"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:hint="College Name"
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textColor="@color/TextColorBlack"
+                    android:textSize="14sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_schoolEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:theme="@style/InputEditText_Light"
+                android:visibility="gone">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_schoolEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_dark_email"
+                    android:drawablePadding="10dp"
+                    android:hint="School Email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/TextColorBlack"
+                    android:textSize="14sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_studentOrg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_studentOrg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_dark_student"
+                    android:drawablePadding="10dp"
+                    android:hint="Student Organization (optional)"
+                    android:inputType="text"
+                    android:textColor="@color/TextColorBlack"
+                    android:textSize="14sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_yearofGrad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_yearofGrad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_dark_graduation"
+                    android:drawableRight="@drawable/icon_dropdown_arrow"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:hint="Expected Year Of Graduation"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColor="@color/TextColorBlack"
+                    android:textSize="14sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_ssn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:theme="@style/InputEditText_Light"
+                android:visibility="gone">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_ssn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_dark_state"
+                    android:drawablePadding="10dp"
+                    android:hint="Social Security Number"
+                    android:inputType="number"
+                    android:textColor="@color/TextColorBlack"
+                    android:textSize="14sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <LinearLayout
+                android:id="@+id/driverFieldsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputlayout_drivingLicenceNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:theme="@style/InputEditText_Light"
+                    android:visibility="gone">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/field_drivingLicenceNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_license"
+                        android:drawablePadding="10dp"
+                        android:hint="Driving License Number"
+                        android:inputType="text"
+                        android:textColor="@color/TextColorBlack"
+                        android:textSize="14sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="20dp"
+                    android:text="Vehicle Information"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputlayout_vehicleType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:theme="@style/InputEditText_Light">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/field_vehicleType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_vehicle"
+                        android:drawableRight="@drawable/icon_dropdown_arrow"
+                        android:drawablePadding="10dp"
+                        android:focusable="false"
+                        android:hint="Vehicle Type"
+                        android:inputType="text"
+                        android:longClickable="false"
+                        android:textColor="@color/TextColorBlack"
+                        android:textSize="14sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputlayout_vehicleno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:theme="@style/InputEditText_Light">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/field_vehicleno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_vehicle_no"
+                        android:drawablePadding="10dp"
+                        android:hint="License Plate No"
+                        android:inputType="text"
+                        android:textColor="@color/TextColorBlack"
+                        android:textSize="14sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputlayout_make"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:theme="@style/InputEditText_Light">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/field_make"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_vehicle_make"
+                        android:drawableRight="@drawable/icon_dropdown_arrow"
+                        android:drawablePadding="10dp"
+                        android:focusable="false"
+                        android:hint="Make"
+                        android:longClickable="false"
+                        android:textColor="@color/TextColorBlack"
+                        android:textSize="14sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/inputlayout_model"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:theme="@style/InputEditText_Light">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/field_model"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/icon_vehicle_mode"
+                            android:drawableRight="@drawable/icon_dropdown_arrow"
+                            android:drawablePadding="10dp"
+                            android:focusable="false"
+                            android:hint="Model"
+                            android:longClickable="false"
+                            android:textColor="@color/TextColorBlack"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/inputlayout_year"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:theme="@style/InputEditText_Light">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/field_year"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/icon_vehicle_year"
+                            android:drawableRight="@drawable/icon_dropdown_arrow"
+                            android:drawablePadding="10dp"
+                            android:focusable="false"
+                            android:hint="Year"
+                            android:inputType="text"
+                            android:longClickable="false"
+                            android:textColor="@color/TextColorBlack"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center">
+
+                <com.seatus.Views.RippleView
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_cancel"
+                    app:rv_centered="true"
+                    app:rv_color="@color/colorAccent" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content" />
+
+
+                <com.seatus.Views.RippleView
+                    android:id="@+id/btn_save_changes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_save_changes"
+                    app:rv_centered="true" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

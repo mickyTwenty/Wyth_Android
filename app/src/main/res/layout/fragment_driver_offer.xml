@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_container_small"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:id="@+id/layout_driver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circleImageView"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_image_circle" />
+
+                <android.support.v7.widget.AppCompatRatingBar
+                    android:id="@+id/rating"
+                    style="@style/smallRatingBarDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="5dp"
+                    android:isIndicator="true" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="5dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Passenger Name:"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/TextColorBlack"
+                        android:textSize="@dimen/text_medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:text="No of bags:"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_bags"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:lines="1"
+                        android:text="0"
+                        android:textColor="@color/TextColorBlack"
+                        android:textSize="@dimen/text_medium" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_tooltip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:lines="1"
+                    android:text=""
+                    android:textColor="@color/TextColorBlack"
+                    android:textSize="@dimen/text_medium" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Trip ID:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_trip_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false" />
+
+                <TextView
+                    android:id="@+id/txt_ride_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:textColor="@color/colorAccent" />
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Origin:"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txt_origin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:maxLines="1" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Destination:"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txt_destination"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:maxLines="1" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Date:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawablePadding="5dp" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Time of Day:"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <include layout="@layout/view_bullet_divider_dynamic" />
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_morning"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="0"
+                        android:clickable="false"
+                        android:includeFontPadding="false"
+                        android:text="Morning"
+                        android:theme="@style/checkboxStyle" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_afternoon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:layout_row="0"
+                        android:clickable="false"
+                        android:includeFontPadding="false"
+                        android:text="Afternoon"
+                        android:theme="@style/checkboxStyle" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_night"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="0"
+                        android:layout_row="1"
+                        android:clickable="false"
+                        android:includeFontPadding="false"
+                        android:text="Evening"
+                        android:theme="@style/checkboxStyle" />
+
+                </GridLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_past_trip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bullet_icon_green" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:includeFontPadding="false"
+                        android:text="Estimate:"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/txt_estimate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:includeFontPadding="false" />
+
+                    <TextView
+                        android:id="@+id/txt_estimate_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:includeFontPadding="false"
+                        android:text="(double for round trip)"
+                        android:textSize="10sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_toggle_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="View Details +"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:padding="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_msg_field"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/edit_msg"
+                android:layout_width="303dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="Amount in $"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:padding="4dp"
+                android:src="@drawable/btn_make_offer" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

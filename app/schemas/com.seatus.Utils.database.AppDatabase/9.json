@@ -1,0 +1,369 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 9,
+    "identityHash": "5cb5d9a1231ed3db2f45ec7a74b4eeb2",
+    "entities": [
+      {
+        "tableName": "CityItem",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT, `state_id` TEXT, `state_name` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "state_id",
+            "columnName": "state_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "state_name",
+            "columnName": "state_name",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "StateItem",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT, `country_id` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "country_id",
+            "columnName": "country_id",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "UserItem",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`is_third_party` INTEGER NOT NULL, `gender` TEXT, `city` TEXT, `email` TEXT, `city_text` TEXT, `state` TEXT, `state_text` TEXT, `profile_picture` TEXT, `share_count` INTEGER NOT NULL, `user_id` TEXT NOT NULL, `first_name` TEXT, `last_name` TEXT, `school_name` TEXT, `phone` TEXT, `zip` TEXT, `graduation_year` TEXT, `student_organization` TEXT, `birth_date` TEXT, `pass` TEXT, `user_type` TEXT, `role_id` TEXT, `has_sync_friends` INTEGER NOT NULL, `has_facebook_integrated` INTEGER NOT NULL, `follower_count` INTEGER, `rating` REAL, `feedback` TEXT, `trip_id` TEXT, `has_pending_ratings` INTEGER NOT NULL, `token` TEXT, `driving_license_no` TEXT, `vehicle_type` TEXT, `vehicle_make` TEXT, `vehicle_id_number` TEXT, `vehicle_model` TEXT, `vehicle_year` TEXT, `insurance_no` TEXT, `insurance_company` TEXT, `policy_effective_date` TEXT, `policy_expiry_date` TEXT, `group_id` TEXT, PRIMARY KEY(`user_id`))",
+        "fields": [
+          {
+            "fieldPath": "is_third_party",
+            "columnName": "is_third_party",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "gender",
+            "columnName": "gender",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "city",
+            "columnName": "city",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "city_text",
+            "columnName": "city_text",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "state",
+            "columnName": "state",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "state_text",
+            "columnName": "state_text",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "profile_picture",
+            "columnName": "profile_picture",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "share_count",
+            "columnName": "share_count",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "user_id",
+            "columnName": "user_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "first_name",
+            "columnName": "first_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "last_name",
+            "columnName": "last_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "school_name",
+            "columnName": "school_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "phone",
+            "columnName": "phone",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "zip",
+            "columnName": "zip",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "graduation_year",
+            "columnName": "graduation_year",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "student_organization",
+            "columnName": "student_organization",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "birth_date",
+            "columnName": "birth_date",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pass",
+            "columnName": "pass",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "user_type",
+            "columnName": "user_type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "role_id",
+            "columnName": "role_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "has_sync_friends",
+            "columnName": "has_sync_friends",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "has_facebook_integrated",
+            "columnName": "has_facebook_integrated",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "follower_count",
+            "columnName": "follower_count",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "rating",
+            "columnName": "rating",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "feedback",
+            "columnName": "feedback",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "trip_id",
+            "columnName": "trip_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "has_pending_ratings",
+            "columnName": "has_pending_ratings",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "token",
+            "columnName": "token",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "driving_license_no",
+            "columnName": "driving_license_no",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_type",
+            "columnName": "vehicle_type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_make",
+            "columnName": "vehicle_make",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_id_number",
+            "columnName": "vehicle_id_number",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_model",
+            "columnName": "vehicle_model",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicle_year",
+            "columnName": "vehicle_year",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "insurance_no",
+            "columnName": "insurance_no",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "insurance_company",
+            "columnName": "insurance_company",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "policy_effective_date",
+            "columnName": "policy_effective_date",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "policy_expiry_date",
+            "columnName": "policy_expiry_date",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "group_id",
+            "columnName": "group_id",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "user_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "SchoolItem",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`school` TEXT NOT NULL, `state` TEXT, `city` TEXT, PRIMARY KEY(`school`))",
+        "fields": [
+          {
+            "fieldPath": "school",
+            "columnName": "school",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "state",
+            "columnName": "state",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "city",
+            "columnName": "city",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "school"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"5cb5d9a1231ed3db2f45ec7a74b4eeb2\")"
+    ]
+  }
+}

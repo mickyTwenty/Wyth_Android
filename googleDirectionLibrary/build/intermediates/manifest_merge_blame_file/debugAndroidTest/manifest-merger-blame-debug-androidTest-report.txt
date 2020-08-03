@@ -1,0 +1,54 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.akexorcist.googledirection.test" >
+4
+5    <uses-sdk
+5-->C:\Wyth\WythFinal\googleDirectionLibrary\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger387161203655745060.xml:5:5-74
+6        android:minSdkVersion="17"
+6-->C:\Wyth\WythFinal\googleDirectionLibrary\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger387161203655745060.xml:5:15-41
+7        android:targetSdkVersion="26" />
+7-->C:\Wyth\WythFinal\googleDirectionLibrary\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger387161203655745060.xml:5:42-71
+8
+9    <instrumentation
+9-->C:\Wyth\WythFinal\googleDirectionLibrary\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger387161203655745060.xml:11:5-15:85
+10        android:name="android.test.InstrumentationTestRunner"
+10-->C:\Wyth\WythFinal\googleDirectionLibrary\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger387161203655745060.xml:11:22-75
+11        android:functionalTest="false"
+11-->C:\Wyth\WythFinal\googleDirectionLibrary\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger387161203655745060.xml:14:22-52
+12        android:handleProfiling="false"
+12-->C:\Wyth\WythFinal\googleDirectionLibrary\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger387161203655745060.xml:13:22-53
+13        android:label="Tests for com.akexorcist.googledirection.test"
+13-->C:\Wyth\WythFinal\googleDirectionLibrary\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger387161203655745060.xml:15:22-83
+14        android:targetPackage="com.akexorcist.googledirection.test" />
+14-->C:\Wyth\WythFinal\googleDirectionLibrary\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger387161203655745060.xml:12:22-81
+15
+16    <uses-permission android:name="android.permission.INTERNET" /> <!-- Include required permissions for Google Maps API to run. -->
+16-->[__tested_artifact__::googleDirectionLibrary] C:\Wyth\WythFinal\googleDirectionLibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-67
+16-->[__tested_artifact__::googleDirectionLibrary] C:\Wyth\WythFinal\googleDirectionLibrary\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-64
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->[com.google.android.gms:play-services-maps:11.4.2] C:\Users\Steven\.gradle\caches\transforms-2\files-2.1\996d8866c2ecb9feafbdc4a4ee490609\play-services-maps-11.4.2\AndroidManifest.xml:19:5-78
+17-->[com.google.android.gms:play-services-maps:11.4.2] C:\Users\Steven\.gradle\caches\transforms-2\files-2.1\996d8866c2ecb9feafbdc4a4ee490609\play-services-maps-11.4.2\AndroidManifest.xml:19:22-76
+18
+19    <uses-feature
+19-->[com.google.android.gms:play-services-maps:11.4.2] C:\Users\Steven\.gradle\caches\transforms-2\files-2.1\996d8866c2ecb9feafbdc4a4ee490609\play-services-maps-11.4.2\AndroidManifest.xml:21:5-77
+20        android:glEsVersion="0x00020000"
+20-->[com.google.android.gms:play-services-maps:11.4.2] C:\Users\Steven\.gradle\caches\transforms-2\files-2.1\996d8866c2ecb9feafbdc4a4ee490609\play-services-maps-11.4.2\AndroidManifest.xml:21:19-51
+21        android:required="true" />
+21-->[com.google.android.gms:play-services-maps:11.4.2] C:\Users\Steven\.gradle\caches\transforms-2\files-2.1\996d8866c2ecb9feafbdc4a4ee490609\play-services-maps-11.4.2\AndroidManifest.xml:21:52-75
+22
+23    <application android:debuggable="true" >
+23-->C:\Wyth\WythFinal\googleDirectionLibrary\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger387161203655745060.xml:7:5-9:19
+23-->C:\Wyth\WythFinal\googleDirectionLibrary\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger387161203655745060.xml:7:18-43
+24        <uses-library android:name="android.test.runner" />
+24-->C:\Wyth\WythFinal\googleDirectionLibrary\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger387161203655745060.xml:8:9-60
+24-->C:\Wyth\WythFinal\googleDirectionLibrary\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger387161203655745060.xml:8:23-57
+25
+26        <meta-data
+26-->[com.google.android.gms:play-services-basement:11.4.2] C:\Users\Steven\.gradle\caches\transforms-2\files-2.1\8cdf2a4e56d7bdb83fac2813d85e8f17\play-services-basement-11.4.2\AndroidManifest.xml:20:9-121
+27            android:name="com.google.android.gms.version"
+27-->[com.google.android.gms:play-services-basement:11.4.2] C:\Users\Steven\.gradle\caches\transforms-2\files-2.1\8cdf2a4e56d7bdb83fac2813d85e8f17\play-services-basement-11.4.2\AndroidManifest.xml:20:20-65
+28            android:value="@integer/google_play_services_version" />
+28-->[com.google.android.gms:play-services-basement:11.4.2] C:\Users\Steven\.gradle\caches\transforms-2\files-2.1\8cdf2a4e56d7bdb83fac2813d85e8f17\play-services-basement-11.4.2\AndroidManifest.xml:20:66-119
+29    </application>
+30
+31</manifest>

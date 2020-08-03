@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/light_grey"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/field_destination"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:padding="5dp"
+        android:textSize="@dimen/text_medium"
+        android:hint="Destination"
+        android:longClickable="false"
+        android:focusable="false"
+        android:maxLines="1"
+        android:textColor="@color/TextColorBlack"
+        android:background="@drawable/field_date_box"
+        android:drawableEnd="@drawable/icon_destination_dropdown" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="10dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/field_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5"
+        android:padding="5dp"
+        android:hint="Date"
+        android:maxLines="1"
+        android:focusable="false"
+        android:longClickable="false"
+        android:textColor="@color/TextColorBlack"
+        android:textSize="@dimen/text_medium"
+        android:drawableEnd="@drawable/icon_date_picker"
+        android:background="@drawable/field_date_box" />
+</LinearLayout>

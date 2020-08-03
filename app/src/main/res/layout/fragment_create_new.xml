@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/bg_container"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:animateLayoutChanges="true"
+                android:background="@drawable/bg_container_small"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="When would you like to travel "
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Departure:"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="40dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_morning"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:includeFontPadding="false"
+                        android:text="Morning"
+                        android:theme="@style/checkboxStyle" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_afternoon"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:includeFontPadding="false"
+                        android:text="Afternoon"
+                        android:theme="@style/checkboxStyle" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="40dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_night"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:includeFontPadding="false"
+                        android:text="Evening"
+                        android:theme="@style/checkboxStyle" />
+
+                    <ImageView
+                        android:id="@+id/txt_allday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:includeFontPadding="false"
+                        android:src="@drawable/btn_anytime"
+                        android:text="All Day"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_seats"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="Available Seats:"
+                        android:textStyle="bold" />
+
+                    <com.seatus.Views.NumberPicker
+                        android:id="@+id/seat_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_return"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="10dp"
+                        android:includeFontPadding="false"
+                        android:text="Return:"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkbox_morning_return"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:includeFontPadding="false"
+                            android:text="Morning"
+                            android:theme="@style/checkboxStyle" />
+
+                        <CheckBox
+                            android:id="@+id/checkbox_afternoon_return"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:includeFontPadding="false"
+                            android:text="Afternoon"
+                            android:theme="@style/checkboxStyle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="40dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/checkbox_night_return"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:includeFontPadding="false"
+                            android:text="Evening"
+                            android:theme="@style/checkboxStyle" />
+
+                        <ImageView
+                            android:id="@+id/txt_allday_return"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:includeFontPadding="false"
+                            android:src="@drawable/btn_anytime"
+                            android:text="All Day"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_seats_return"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="Available Seats:"
+                            android:textStyle="bold" />
+
+                        <com.seatus.Views.NumberPicker
+                            android:id="@+id/seat_view_return"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estimate:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="$23 - $12" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Book Now:"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/checkbox_bookNow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:button="@drawable/booknow_checkbox"
+                        android:buttonTint="@color/black"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/btn_advancedprefs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#e6e6e6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Advanced Preferences"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/icon_advancedprefs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_collapse_active"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layout_advancedprefs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#e6e6e6"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:includeFontPadding="false"
+                        android:text="Gender:"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinner_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:theme="@style/checkboxStyle" />
+
+                </LinearLayout>
+
+
+                <com.seatus.Views.PreferencesView
+                    android:id="@+id/view_preference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/layout_multi_trip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="Schedule Multiple Trips?" />
+
+                    <CheckBox
+                        android:id="@+id/switch_multi_trip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:theme="@style/checkboxStyle" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_multi_trip_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="Trips to Schedule:"
+                        android:textStyle="bold" />
+
+                    <com.seatus.Views.NumberPicker
+                        android:id="@+id/multi_trip_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_return_trip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="Allow Free Return Trips?" />
+
+                    <CheckBox
+                        android:id="@+id/switch_return_trip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:theme="@style/checkboxStyle" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btn_add_driver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/btn_white_light_empty"
+                    android:gravity="center"
+                    android:text="Add Driver"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/btn_add_frnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_white_light_empty"
+                    android:gravity="center"
+                    android:text="Add Friends"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/field_search"
+                android:drawableRight="@drawable/icon_search"
+                android:hint="Search Driver to invite"
+                android:inputType="text"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/layout_driver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/driver_img"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg_image_circle"
+                    android:padding="3dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Invited Driver"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/driver_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Driver Name"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/driver_seats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/driver_seats_return"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:textSize="@dimen/text_medium"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/driver_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:text="Pending"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.seatus.Views.RippleView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                app:rv_centered="true">
+
+                <TextView
+                    android:id="@+id/btn_continue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_green_empty"
+                    android:gravity="center"
+                    android:text="Create Ride"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </com.seatus.Views.RippleView>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

@@ -1,0 +1,46 @@
+<resources>
+
+    <!--SDK Keys-->
+    <string name="facebook_app_id">296749897492045</string>
+    <string name="google_server_key" templateMergeStrategy="preserve" translatable="false">AIzaSyC9iRb2JbjV5lpy2SlUfwZlWP-Tx8y-ba8</string>
+    <string name="google_places_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDb3cqERWy5XBcPRF_knqm6JAzUJB3nh68</string>
+    <string name="google_android_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAoNdwfHWES1Yz2CUHxmCGBrtk5Fvy9LeA</string>
+
+    <string name="fb_login_protocol_scheme">fb296749897492045</string>
+
+    <string name="app_name">Wyth</string>
+    <string name="dialog_message_forgotpass">Please enter your email address below and we will send you instructions on how to change your password!</string>
+    <string name="dialog_message_verification">Enter your validation code here which you received by email</string>
+    <string name="dialog_message_logout">Are you sure you want to \n logout from the app?</string>
+    <string name="dialog_message_changepass">You can change your password \n just in easy step!</string>
+    <string name="dialog_message_upgrade">Do you want to become a Driver?</string>
+    <string name="dialog_message_makeoffer">Please enter the price you want to offer along for this ride.</string>
+    <string name="dialog_message_makeofferlocal">Would you like to make an offer for this ride?</string>
+    <string name="dialog_message_makeofferfreereturn">Would you like to join this ride as a free trip?</string>
+    <string name="dialog_message_booknow">Please enter the number of bags and submit to book the ride for estimated cost.</string>
+    <string name="dialog_message_localtrip">Local Trip Created</string>
+    <string name="dialog_message_localtrip_sub">You have successfully created a local trip. Offers for local trips are standardized to $5.00, bypassing the price negotiation process.</string>
+
+
+    <string name="dialog_local_price">Offer Price: $5.00</string>
+    <string name="dialog_local_price_free">Offer Price: $0.00 - FREE</string>
+
+    <string name="error_connection">Connection Timeout !</string>
+    <string name="error_validation_email">Invalid Email</string>
+    <string name="error_some_issue">Some error occurred, Please try again!</string>
+    <string name="error_validation_empty">Must be at least 4 characters long</string>
+    <string name="error_validation_null">Cannot be left empty</string>
+    <string name="error_validation_invalid">Invalid data</string>
+    <string name="error_validation_select">Please Select before proceeding</string>
+    <string name="error_validation_donotmatch">Passwords doesn\'t match</string>
+    <string name="error_pending_invites">You have pending Friend Invites, please either cancel their invites or wait for their status to be updated</string>
+    <string name="error_minimum_offer_amount">"Minimum offer amount is $5"</string>
+
+    <string name="str_view_hint">(View)</string>
+
+
+    <string name="payment_hint_daily">If you select the expedited payment option then you should expect to receive a payment within 2 business days after the trip is completed. Please note an additional processing fee of 5% will be charged to your trip earnings when selecting this payment option.</string>
+    <string name="payment_hint_standard">If you select the standard payment option then you should expect to receive payment within 5 business days after the trip is completed. No additional processing fees will be charged for this payment option.</string>
+
+
+</resources>

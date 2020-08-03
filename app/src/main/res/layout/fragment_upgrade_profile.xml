@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_container"
+        android:padding="15dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Please enter the following details, a request will be sent to admin for approval before you can start posting rides as a driver"
+                android:textColor="@color/TextColorBlack"
+                android:textSize="14sp" />
+
+
+            <LinearLayout
+                android:id="@+id/driverFieldsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputlayout_drivingLicenceNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:theme="@style/InputEditText_Light"
+                    android:visibility="gone">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/field_drivingLicenceNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_license"
+                        android:drawablePadding="10dp"
+                        android:hint="Driving License Number"
+                        android:inputType="text"
+                        android:textColor="@color/TextColorBlack"
+                        android:textSize="14sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="20dp"
+                    android:text="Vehicle Information"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputlayout_vehicleType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:theme="@style/InputEditText_Light">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/field_vehicleType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_vehicle"
+                        android:drawableRight="@drawable/icon_dropdown_arrow"
+                        android:drawablePadding="10dp"
+                        android:focusable="false"
+                        android:hint="Vehicle Type"
+                        android:inputType="text"
+                        android:longClickable="false"
+                        android:textColor="@color/TextColorBlack"
+                        android:textSize="14sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputlayout_vehicleno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:theme="@style/InputEditText_Light">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/field_vehicleno"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_vehicle_no"
+                        android:drawablePadding="10dp"
+                        android:hint="License Plate No"
+                        android:inputType="text"
+                        android:textColor="@color/TextColorBlack"
+                        android:textSize="14sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/inputlayout_make"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:theme="@style/InputEditText_Light">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/field_make"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_vehicle_make"
+                        android:drawablePadding="10dp"
+                        android:focusable="false"
+                        android:hint="Make"
+                        android:inputType="text"
+                        android:longClickable="false"
+                        android:textColor="@color/TextColorBlack"
+                        android:textSize="14sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/inputlayout_model"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:theme="@style/InputEditText_Light">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/field_model"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/icon_vehicle_mode"
+                            android:drawablePadding="10dp"
+                            android:focusable="false"
+                            android:hint="Model"
+                            android:inputType="text"
+                            android:longClickable="false"
+                            android:textColor="@color/TextColorBlack"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="15dp"
+                        android:layout_height="wrap_content" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/inputlayout_year"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:theme="@style/InputEditText_Light">
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/field_year"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/icon_vehicle_year"
+                            android:drawableRight="@drawable/icon_dropdown_arrow"
+                            android:drawablePadding="10dp"
+                            android:focusable="false"
+                            android:hint="Year"
+                            android:inputType="text"
+                            android:longClickable="false"
+                            android:textColor="@color/TextColorBlack"
+                            android:textSize="14sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+
+        <com.seatus.Views.RippleView
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_cancel"
+            app:rv_centered="true"
+            app:rv_color="@color/colorAccent" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content" />
+
+        <com.seatus.Views.RippleView
+            android:id="@+id/btn_save_changes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_save_changes"
+            app:rv_centered="true" />
+
+
+    </LinearLayout>
+</LinearLayout>

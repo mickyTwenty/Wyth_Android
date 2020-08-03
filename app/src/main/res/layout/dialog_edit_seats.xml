@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/popup_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/dialog_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dialog_header_accept_invitation"
+            android:visibility="visible" />
+
+        <ProgressBar
+            android:id="@+id/dialog_progressbar"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/dialog_title_accept_invite" />
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="18"
+        android:gravity="center_horizontal"
+        android:text="Please Enter Seats"
+        android:textColor="#6b6b6b"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:text="No of Seats" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/field_rounded_small"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small">
+
+            <ImageView
+                android:id="@+id/btn_seat_minus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/minus_dark" />
+
+            <TextView
+                android:id="@+id/txt_bags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:maxLength="1"
+                android:text="1"
+                android:textColor="@color/TextColorBlack"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btn_seat_plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:src="@drawable/plus_dark" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.seatus.Views.RippleView
+            android:id="@+id/btn_negative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_white_empty"
+            android:gravity="center"
+            app:rv_centered="true">
+
+            <TextView
+                android:id="@+id/txt_negative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </com.seatus.Views.RippleView>
+
+        <android.support.v4.widget.Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+
+        <com.seatus.Views.RippleView
+            android:id="@+id/btn_positive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_green_empty"
+            android:gravity="center"
+            app:rv_centered="true">
+
+            <TextView
+                android:id="@+id/txt_positive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </com.seatus.Views.RippleView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

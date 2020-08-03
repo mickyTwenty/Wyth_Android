@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: com.instabug.library:instabug-features-request:8.0.2@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2bfb64cb8f67a55c3b94013a6f1ea303/instabug-features-request-8.0.2/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2bfb64cb8f67a55c3b94013a6f1ea303/instabug-features-request-8.0.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2bfb64cb8f67a55c3b94013a6f1ea303/instabug-features-request-8.0.2/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.instabug.library/instabug-features-request/8.0.2/5c345781094506e6e40acf0454e2fa0bb4abfd11/instabug-features-request-8.0.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.instabug.library/instabug-features-request/8.0.2/5c345781094506e6e40acf0454e2fa0bb4abfd11/instabug-features-request-8.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

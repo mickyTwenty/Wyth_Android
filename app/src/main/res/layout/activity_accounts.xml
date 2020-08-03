@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/login_bg">
+
+    <FrameLayout
+        android:id="@+id/frame_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/frame_register"
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:background="@color/colorAccent">
+
+        <com.seatus.Views.VerticalTextView
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="bottom"
+            android:tag="1"
+            android:text="sign up"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:textAllCaps="true" />
+
+    </FrameLayout>
+
+
+    <android.support.v4.widget.Space
+        android:id="@+id/spaceLeft"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@color/colorAccent" />
+
+    <FrameLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#72000000"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:padding="10dp"
+                android:src="@drawable/actionbar_back"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/logo_signup" />
+
+        </RelativeLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_user"
+                android:drawablePadding="10dp"
+                android:hint="First Name"
+                android:inputType="textCapWords"
+                android:maxLength="100"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_user"
+                android:drawablePadding="10dp"
+                android:hint="Last Name"
+                android:inputType="textCapWords"
+                android:maxLength="100"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_gender"
+                android:drawableRight="@drawable/icon_dropdown_arrow"
+                android:drawablePadding="10dp"
+                android:focusable="false"
+                android:hint="Gender"
+                android:inputType="textCapWords"
+                android:longClickable="false"
+                android:maxLength="100"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_schoolname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_schoolname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_school"
+                android:drawableRight="@drawable/icon_dropdown_arrow"
+                android:drawablePadding="10dp"
+                android:focusable="false"
+                android:hint="College Name"
+                android:inputType="textCapWords"
+                android:longClickable="false"
+                android:maxLength="100"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_schoolemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_schoolemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_email"
+                android:drawablePadding="10dp"
+                android:hint="College Email"
+                android:inputType="textEmailAddress"
+                android:maxLength="100"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_phone"
+                android:drawablePadding="10dp"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:maxLength="20"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_yearofgrad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_yearofgrad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/icon_grad"
+                android:drawablePadding="5dp"
+                android:focusable="false"
+                android:hint="Year Of Graduation"
+                android:longClickable="false"
+                android:maxLength="4"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_studentOrg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_studentOrg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_student"
+                android:drawablePadding="10dp"
+                android:hint="Student Organization (optional)"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_source"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_source"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/icon_gender"
+                android:drawableRight="@drawable/icon_dropdown_source"
+                android:drawablePadding="10dp"
+                android:focusable="false"
+                android:hint="How did you find us ?"
+                android:inputType="textCapWords"
+                android:longClickable="false"
+                android:maxLength="100"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/white">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/icon_pass"
+                android:drawablePadding="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLength="100"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/inputlayout_pass2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="5dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/white">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/field_pass2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/icon_pass"
+                android:drawablePadding="10dp"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:maxLength="100"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <com.seatus.Views.RippleView
+            android:id="@+id/btn_signup_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/signup_rider_btn"
+            app:rv_centered="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/seperator_or" />
+
+        <com.seatus.Views.RippleView
+            android:id="@+id/btn_signup_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/signup_driver_btn"
+            app:rv_centered="true" />
+
+    </LinearLayout>
+</ScrollView>

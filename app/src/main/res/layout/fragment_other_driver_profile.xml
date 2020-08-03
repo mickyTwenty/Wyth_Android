@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_container"
+        android:orientation="vertical"
+        android:paddingLeft="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_user"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/bg_image_circle"
+                    android:padding="3dp" />
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <android.support.v7.widget.AppCompatRatingBar
+                    android:id="@+id/txt_rating"
+                    style="@style/smallRatingBarDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:isIndicator="true" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/btn_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:visibility="gone">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/btn_fiends" />
+
+                <TextView
+                    android:id="@+id/txt_friends_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/bg_badge"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:maxLength="2"
+                    android:padding="2dp"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bullet_icon_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false"
+                android:text="Date Of Birth:"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txt_dateofbirth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/view_bullet_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bullet_icon_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false"
+                android:text="Gender:"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txt_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/divider_phone"
+            layout="@layout/view_bullet_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/layout_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bullet_icon_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false"
+                android:text="Phone:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/view_bullet_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bullet_icon_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false"
+                android:text="State:"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txt_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/view_bullet_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bullet_icon_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false"
+                android:text="City:"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txt_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/view_bullet_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bullet_icon_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false"
+                android:text="Zip:"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txt_zip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/view_bullet_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bullet_icon_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false"
+                android:text="College Name:"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txt_schoolname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/view_bullet_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bullet_icon_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false"
+                android:text="College Email:"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txt_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/view_bullet_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bullet_icon_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false"
+                android:text="Expected Year of Graduation:"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txt_yearofgrad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/view_bullet_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bullet_icon_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false"
+                android:text="Student Organization:"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txt_studentorg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/view_bullet_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bullet_icon_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false"
+                android:text="Rides Canceled as Passenger:"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txt_canceled_passenger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:includeFontPadding="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_driver_fields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <include
+                android:id="@+id/divider_canceled_driver"
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:id="@+id/layout_canceled_driver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Rides Canceled as Driver:"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txt_canceled_driver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false" />
+
+            </LinearLayout>
+
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Driving License no:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_driving_licence"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:includeFontPadding="false"
+                android:text="Vehicle Information"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Vehicle Type:"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txt_vehicle_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="License Plate No:"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_vehicle_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Vehicle Make:"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txt_vehicle_make"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Vehicle Model:"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txt_vehicle_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/view_bullet_divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bullet_icon_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false"
+                    android:text="Vehicle Year:"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/txt_vehicle_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:includeFontPadding="false" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

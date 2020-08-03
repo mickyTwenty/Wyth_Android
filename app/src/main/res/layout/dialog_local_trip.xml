@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/popup_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/dialog_header_booknow" />
+
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="18"
+        android:gravity="center_horizontal"
+        android:text="@string/dialog_message_localtrip"
+        android:textSize="18sp"
+        android:textStyle="italic|bold" />
+
+
+    <TextView
+        android:id="@+id/txt_local_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:minLines="7"
+        android:text="@string/dialog_message_localtrip_sub"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <android.support.v4.widget.Space
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+
+        <com.seatus.Views.RippleView
+            android:id="@+id/btn_positive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_green_empty"
+            android:gravity="center"
+            app:rv_centered="true">
+
+            <TextView
+                android:id="@+id/txt_positive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Okay"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </com.seatus.Views.RippleView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

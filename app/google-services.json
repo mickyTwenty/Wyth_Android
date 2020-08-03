@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "155249036426",
+    "firebase_url": "https://wherr2-app-20904.firebaseio.com",
+    "project_id": "wherr2-app-20904",
+    "storage_bucket": "wherr2-app-20904.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155249036426:android:c57605395fe45323",
+        "android_client_info": {
+          "package_name": "com.seatus.wherr2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155249036426-99kbkfhvrocesobg9nlug1tovoogs4sb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoNdwfHWES1Yz2CUHxmCGBrtk5Fvy9LeA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155249036426:android:74fbeaa7b6e8ec73",
+        "android_client_info": {
+          "package_name": "com.wyth.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155249036426-99kbkfhvrocesobg9nlug1tovoogs4sb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoNdwfHWES1Yz2CUHxmCGBrtk5Fvy9LeA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

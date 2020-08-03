@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/img_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_filled" />
+
+    <TextView
+        android:id="@+id/txt_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available"
+        android:textColor="@color/TextColorBlack"
+        android:textSize="@dimen/text_small" />
+
+    <LinearLayout
+        android:id="@+id/layout_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_bags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/TextColorBlack"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/txt_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/TextColorBlack"
+            android:textSize="@dimen/text_small" />
+
+    </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/passengerImage"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_image_circle"
+        android:padding="2dp" />
+
+    <LinearLayout
+        android:id="@+id/bg_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_passenger_detail"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/passengerStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/TextColorBlack"
+            android:textSize="8sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/passengerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/TextColorBlack"
+            android:textSize="8sp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatRatingBar
+        android:id="@+id/ratings"
+        style="@style/smallRatingBarDark"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginTop="5dp"
+        android:isIndicator="true" />
+</LinearLayout>
