@@ -10,10 +10,11 @@ public class AppConstants {
 
     public static String url_local = "http://192.168.168.114/seatus/public/";
     public static String url_live = "https://portal.gowyth.com/";
-    public static String url_staging = "http://34.213.248.253/";
+    // public static String url_staging = "http://34.213.248.253/";
+    public static String url_staging = "http://18.223.186.184/";
 
-    //public static String ServerUrl = url_staging;
-    public static String ServerUrl = url_live;
+    public static String ServerUrl = url_staging;
+    // public static String ServerUrl = url_live;
 
     public static String ApiUrl = ServerUrl + "api/v1/";
 
@@ -41,8 +42,8 @@ public class AppConstants {
     public static String KEY_LATITUDE = "key_location_latitude";
     public static String KEY_LONGITUDE = "key_location_longitude";
 
-    // public static final String STRIPE_KEY = "pk_test_3mNpJpdwD47TQyZcOOzLZfQr";
-    public static final String STRIPE_KEY = "pk_live_JsROXvemcrUVJN91G7Zmm7X8";
+    public static final String STRIPE_KEY = "pk_test_3mNpJpdwD47TQyZcOOzLZfQr";
+    // public static final String STRIPE_KEY = "pk_live_JsROXvemcrUVJN91G7Zmm7X8";
 
     public static final String FROM_PUSH = "arg_from_push";
     public static final String PUSH_ID = "arg_push_id";

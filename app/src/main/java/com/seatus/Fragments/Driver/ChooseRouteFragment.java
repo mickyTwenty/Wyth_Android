@@ -210,7 +210,7 @@ public class ChooseRouteFragment extends BaseFragment implements OnMapReadyCallb
         makeSnackbar("No Routes Found");
     }
 
-    public String selectedPaymentType = "standard";
+    public String selectedPaymentType = "1";
 
     @OnClick(R.id.btn_create_trip)
     public void onViewClicked() {

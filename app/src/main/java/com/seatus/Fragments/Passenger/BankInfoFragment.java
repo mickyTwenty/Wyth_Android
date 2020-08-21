@@ -112,7 +112,7 @@ public class BankInfoFragment extends BaseFragment {
 
     @Override
     protected int getLayout() {
-        return R.layout.fragment_bank_info;
+        return R.layout.fragment_bankvenmo_info;
     }
 
     @Override
@@ -331,7 +331,7 @@ public class BankInfoFragment extends BaseFragment {
 
         boolean valid = true;
 
-        if (selectedState == null) {
+        /*if (selectedState == null) {
             inputlayoutState.setError(getString(R.string.error_validation_select));
             valid = false;
         } else inputlayoutState.setError(null);
@@ -341,7 +341,7 @@ public class BankInfoFragment extends BaseFragment {
             valid = false;
         } else inputlayoutCity.setError(null);
 
-       /* if (bankName.length() < 1) {
+        if (bankName.length() < 1) {
             inputlayoutBankName.setError(getString(R.string.error_validation_null));
             valid = false;
         } else inputlayoutBankName.setError(null);*/
@@ -351,10 +351,10 @@ public class BankInfoFragment extends BaseFragment {
             valid = false;
         } else inputlayoutAccountName.setError(null);
 
-        if (bankRouting.length() < 1) {
+        /*if (bankRouting.length() < 1) {
             inputlayoutBankRouting.setError(getString(R.string.error_validation_null));
             valid = false;
-        } else inputlayoutBankRouting.setError(null);
+        } else inputlayoutBankRouting.setError(null);*/
 
         if (accountNo.length() < 1) {
             inputlayoutAccountNo.setError(getString(R.string.error_validation_null));
@@ -366,7 +366,7 @@ public class BankInfoFragment extends BaseFragment {
             valid = false;
         } else inputlayoutPersonalId.setError(null);*/
 
-        if (ssn_last_4.length() < 4) {
+        /*if (ssn_last_4.length() < 4) {
             inputlayoutPersonalId.setError(getString(R.string.error_validation_invalid));
             valid = false;
         } else inputlayoutPersonalId.setError(null);
@@ -379,7 +379,7 @@ public class BankInfoFragment extends BaseFragment {
         if (postal_code.length() < 1) {
             inputlayoutPostalCode.setError(getString(R.string.error_validation_null));
             valid = false;
-        } else inputlayoutPostalCode.setError(null);
+        } else inputlayoutPostalCode.setError(null);*/
 
         if (birth_date.length() < 1) {
             inputlayoutDob.setError(getString(R.string.error_validation_null));

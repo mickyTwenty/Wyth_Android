@@ -23,6 +23,7 @@ import com.seatus.Models.UserItem;
 import com.seatus.R;
 import com.seatus.Retrofit.WebResponse;
 import com.seatus.Retrofit.WebServiceFactory;
+import com.seatus.Services.MyFirebaseInstanceIdService;
 import com.seatus.Utils.AppStore;
 import com.seatus.Utils.DialogHelper;
 import com.seatus.Utils.PreferencesManager;
@@ -263,6 +264,18 @@ public class RegisterNewFragment extends BaseFragment implements VerificationSuc
         if (!areFieldsValid(firstname, lastname, gender, schoolname, schoolemail, phone, selectedYearOfGrad, pass, pass2))
             return;
 
+        String email = fieldSchoolemail.getText().toString().trim();
+        String passw = fieldPass.getText().toString().trim();
+
+        boolean check = true;
+        PreferencesManager.putBoolean(KEY_REMEMBER, check);
+        if (check) {
+            PreferencesManager.putString("user", email);
+            PreferencesManager.putString("pass", passw);
+        }
+
+        String deviceToken = MyFirebaseInstanceIdService.getAppToken();
+
         DialogHelper.showTermsDialog(getContext(), userType, (dialog, which) -> {
 
             getActivityViewModel().register(
@@ -280,7 +293,7 @@ public class RegisterNewFragment extends BaseFragment implements VerificationSuc
                     pass,
                     userType.name(),
                     reference_source,
-                    "dummy_token",
+                    deviceToken,
                     facebookToken).observe(this, webResponseResource -> {
                 switch (webResponseResource.status) {
                     case loading:
@@ -290,7 +303,8 @@ public class RegisterNewFragment extends BaseFragment implements VerificationSuc
                         hideLoader();
                         getFragmentActivity().getSupportFragmentManager().popBackStack();
                         getFragmentActivity().getSupportFragmentManager().popBackStack();
-                        handler.postDelayed(() -> DialogHelper.showEmailValidationDialog(getContext(), this), 1000);
+                        makeSnackbar(webResponseResource.data.message);
+                        //handler.postDelayed(() -> DialogHelper.showEmailValidationDialog(getContext(), this), 1000);
                         break;
                     default:
                         hideLoader();
@@ -334,10 +348,10 @@ public class RegisterNewFragment extends BaseFragment implements VerificationSuc
             valid = false;
         } else inputlayoutPhone.setError(null);
 
-        if (TextUtils.isEmpty(selectedYearOfGrad)) {
+        /*if (TextUtils.isEmpty(selectedYearOfGrad)) {
             inputlayoutYearofgrad.setError(getString(R.string.error_validation_select));
             valid = false;
-        } else inputlayoutYearofgrad.setError(null);
+        } else inputlayoutYearofgrad.setError(null);*/
 
         if (pass.length() < 6) {
             inputlayoutPass.setError(getString(R.string.error_validation_empty));

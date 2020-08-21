@@ -90,6 +90,9 @@ public class ActivityViewModel extends AndroidViewModel {
 
     public LiveData<Resource<WebResponse>> resendVerificationCode(String email) {
 
+        if(email.isEmpty())
+            email = PreferencesManager.getString("user");
+
         MutableLiveData<Resource<WebResponse>> mutableData = new MutableLiveData<>();
         mutableData.setValue(Resource.loading());
         WebServiceFactory.getInstance().resendVerificationCode(email).enqueue(new Callback<WebResponse>() {
@@ -231,7 +234,7 @@ public class ActivityViewModel extends AndroidViewModel {
 
         MutableLiveData<Resource<WebResponse>> mutableData = new MutableLiveData<>();
         mutableData.setValue(Resource.loading());
-        WebServiceFactory.getInstance().register(first_name, last_name, gender, school_name, email, phone, student_organization, stateid, cityid, zip, selectedYearOfGrad, pass, user_type, reference_source, device_token, "andoid", facebookToken).enqueue(new Callback<WebResponse>() {
+        WebServiceFactory.getInstance().register(first_name, last_name, gender, school_name, email, phone, student_organization, stateid, cityid, zip, selectedYearOfGrad, pass, user_type, reference_source, device_token, "android", facebookToken).enqueue(new Callback<WebResponse>() {
             @Override
             public void onResponse(Call<WebResponse> call, Response<WebResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {

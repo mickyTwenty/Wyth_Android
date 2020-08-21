@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_bank_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bank Name"
+                android:visibility="gone"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_bank_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:inputType="textCapWords"
+                    android:textSize="@dimen/text_medium" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_account_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name on Account"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_account_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:inputType="textCapWords"
+                    android:textSize="@dimen/text_medium" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_account_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Venmo Account @name"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_account_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:inputType="textEmailAddress"
+                    android:textSize="@dimen/text_medium" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_bank_routing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Routing Number"
+                android:visibility="gone"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_bank_routing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:inputType="number"
+                    android:textSize="@dimen/text_medium" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_personal_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Personal ID Number"
+                android:visibility="gone"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_personal_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:inputType="number"
+                    android:textSize="@dimen/text_medium" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_ssn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="SSN (Last 4 digits)"
+                android:visibility="gone"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_ssn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textSize="@dimen/text_medium" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:visibility="gone"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:inputType="textMultiLine"
+                    android:maxLines="3"
+                    android:textSize="@dimen/text_medium" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/icon_dropdown_arrow"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:hint="State"
+                    android:visibility="gone"
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textColor="@color/TextColorBlack"
+                    android:textSize="14sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/icon_dropdown_arrow"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:hint="City"
+                    android:visibility="gone"
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textColor="@color/TextColorBlack"
+                    android:textSize="14sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_postal_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Postal Code"
+                android:visibility="gone"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_postal_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:inputType="text"
+                    android:textSize="@dimen/text_medium" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/inputlayout_dob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:theme="@style/InputEditText_Light">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/field_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/icon_dropdown_arrow"
+                    android:drawablePadding="10dp"
+                    android:focusable="false"
+                    android:hint="Date Of Birth"
+                    android:inputType="text"
+                    android:longClickable="false"
+                    android:textColor="@color/TextColorBlack"
+                    android:textSize="14sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <ImageView
+                android:id="@+id/btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/btn_save" />
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

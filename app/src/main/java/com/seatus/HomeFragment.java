@@ -188,18 +188,24 @@ public class HomeFragment extends BaseLocationPickerFragment implements OnMapRea
             }
 
 
-            if (!TextUtils.isEmpty(getTempItem().destination_geo)) {
+            /*if (!TextUtils.isEmpty(getTempItem().destination_geo)) {
                 txtDestination.setText(getTempItem().destination_text);
                 txtDestination.setTag(getTempItem().destination_geo);
-            }
+            }*/
+
+            /*getTempItem().destination_text = "";
+            getTempItem().destination_geo = null;
+            updateTempItem();*/
+
+            //googleMap.clear();
+
             switchRoundtrip.setChecked(getTempItem().isRoundTrip == 1);
 
             if (!TextUtils.isEmpty(getTempItem().origin_geo)) {
                 txtOrigin.setText(getTempItem().origin_text);
                 txtOrigin.setTag(getTempItem().origin_geo);
-               googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(StaticMethods.parseLatLng(getTempItem().origin_geo), 13));
+                googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(StaticMethods.parseLatLng(getTempItem().origin_geo), 13));
             }
-
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -270,7 +276,7 @@ public class HomeFragment extends BaseLocationPickerFragment implements OnMapRea
 
         this.googleMap = googleMap;
 
-        loadMarkers();
+        //loadMarkers();
     }
 
     @OnClick({R.id.txt_origin, R.id.txt_destination, R.id.txt_date, R.id.txt_return_date,
@@ -657,7 +663,7 @@ public class HomeFragment extends BaseLocationPickerFragment implements OnMapRea
                 googleMap.animateCamera(CameraUpdateFactory.newLatLngBounds(newbounds, 150));
 
                 // Custom Markers
-                loadMarkers();
+                //loadMarkers();
             } catch (Exception e) {
                 e.printStackTrace();
                 try {

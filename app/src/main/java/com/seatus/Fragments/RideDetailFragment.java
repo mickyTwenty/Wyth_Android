@@ -683,7 +683,7 @@ public class RideDetailFragment extends BaseStatesFragment {
                                     .show();
 
                         }
-                            /*getActivityViewModel().getMyTrips("passenger/past", "", "", "").observe(this, webResponseResource -> {
+                        /*    getActivityViewModel().getMyTrips("passenger/past", "", "", "").observe(this, webResponseResource -> {
                                 switch (webResponseResource.status) {
                                     case loading:
                                         showLoader();
@@ -694,11 +694,13 @@ public class RideDetailFragment extends BaseStatesFragment {
                                         if (webResponseResource.data.body != null) {
                                             tripItems.addAll(webResponseResource.data.body);
 
+                                            // Get Current Time
                                             long mostRecentTime = 0;
                                             String recentOriginTitle = "";
                                             LatLng recentOriginGeo = null;
                                             String recentDestinationTitle = "";
                                             LatLng recentDestinationGeo = null;
+
                                             for (TripItem trip : tripItems) {
                                                 String endDate = trip.ended_at;
                                                 if (endDate != null) {

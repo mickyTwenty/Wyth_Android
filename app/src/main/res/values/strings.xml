@@ -2,9 +2,9 @@
 
     <!--SDK Keys-->
     <string name="facebook_app_id">296749897492045</string>
-    <string name="google_server_key" templateMergeStrategy="preserve" translatable="false">AIzaSyC9iRb2JbjV5lpy2SlUfwZlWP-Tx8y-ba8</string>
-    <string name="google_places_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDb3cqERWy5XBcPRF_knqm6JAzUJB3nh68</string>
-    <string name="google_android_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAoNdwfHWES1Yz2CUHxmCGBrtk5Fvy9LeA</string>
+    <string name="google_server_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAWiuB1YKlIhdX_wvqvcKRZuqxPkFMRMxs</string>
+    <string name="google_places_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCDPLb3ojGxah5nBaf_dbLz1ASCqzi8uaw</string>
+    <string name="google_android_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBPGcx56v4dTLh2n7rZYYUa-zwA-CI6_uc</string>
 
     <string name="fb_login_protocol_scheme">fb296749897492045</string>
 
@@ -42,5 +42,8 @@
     <string name="payment_hint_daily">If you select the expedited payment option then you should expect to receive a payment within 2 business days after the trip is completed. Please note an additional processing fee of 5% will be charged to your trip earnings when selecting this payment option.</string>
     <string name="payment_hint_standard">If you select the standard payment option then you should expect to receive payment within 5 business days after the trip is completed. No additional processing fees will be charged for this payment option.</string>
 
+    <string name="donation_title">Back to School\n Challenge</string>
+    <string name="donation_hint">Amount: </string>
+    <string name="donation_hint_standard">Donation amount is a percentage of trip earnings that will go towards the Back to School Challenge. Back-to-School Challenge is a student-led effort to raise $1 million for a National Day of Thanks to Healthcare Workers. Together we can reach our goal.</string>
 
 </resources>

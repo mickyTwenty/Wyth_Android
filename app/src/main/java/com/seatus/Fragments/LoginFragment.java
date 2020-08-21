@@ -273,6 +273,7 @@ public class LoginFragment extends BaseFragment implements VerificationSuccessIn
 
     @Override
     public void onResend(VerificationDialog dialog) {
+
         getActivityViewModel().resendVerificationCode(fieldEmail.getText().toString().trim()).observe(this, webResponseResource -> {
             switch (webResponseResource.status) {
                 case loading:

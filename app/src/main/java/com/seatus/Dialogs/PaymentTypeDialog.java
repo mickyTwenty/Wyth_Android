@@ -10,10 +10,13 @@ import android.support.annotation.StyleRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.seatus.R;
@@ -34,8 +37,8 @@ public class PaymentTypeDialog extends Dialog {
     ProgressBar progressBar;
     @BindView(R.id.dialog_header)
     ImageView imgHeader;
-    @BindView(R.id.dialog_title)
-    ImageView imgTitle;
+    @BindView(R.id.txt_title)
+    TextView txtTitle;
     @BindView(R.id.dialog_message)
     TextView txtMessage;
 
@@ -48,19 +51,14 @@ public class PaymentTypeDialog extends Dialog {
     @BindView(R.id.txt_positive)
     TextView txtPositive;
 
-    @BindView(R.id.radiogroup)
-    RadioGroup radioGroup;
-
-    @BindView(R.id.btn_standard)
-    RadioButton radioStandard;
-    @BindView(R.id.btn_expedited)
-    RadioButton radioExpedited;
+    @BindView(R.id.donationspinner)
+    Spinner donationSpinner;
 
     @BindView(R.id.txt_payment_hint)
     TextView txtPaymentHint;
 
 
-    String selectedPayment = "standard";
+    String selectedPayment = "1";
 
     private PaymentTypeDialog(@NonNull Context context, int themeResId) {
         super(context, themeResId);
@@ -78,7 +76,7 @@ public class PaymentTypeDialog extends Dialog {
     private void initUi() {
 
         LayoutInflater li = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View dialogView = li.inflate(R.layout.dialog_payment_type, null, false);
+        View dialogView = li.inflate(R.layout.dialog_paymentdonation_type, null, false);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         setContentView(dialogView);
         setCancelable(true);
@@ -86,15 +84,36 @@ public class PaymentTypeDialog extends Dialog {
         ButterKnife.bind(this);
         btnNegative.setOnClickListener(view -> dismiss());
 
-        radioGroup.setOnCheckedChangeListener((radioGroup1, id) -> {
-            if (id == R.id.btn_standard) {
-                txtPaymentHint.setText(R.string.payment_hint_standard);
-                selectedPayment = "standard";
-            } else {
-                txtPaymentHint.setText(R.string.payment_hint_daily);
-                selectedPayment = "expedited";
+        // Populate Spinner list for Donation values
+        Spinner spinner = (Spinner) findViewById(R.id.donationspinner);
+// Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(context,
+                R.array.donations_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setSelection(1);
+
+        // Set listener for new donation values being selected
+        AdapterView.OnItemSelectedListener donationSelectedListener = new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> spinner, View container,
+                                       int position, long id) {
+                selectedPayment = String.valueOf(id);
             }
-        });
+
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+                // TODO Auto-generated method stub
+            }
+        };
+        spinner.setOnItemSelectedListener(donationSelectedListener);
+    }
+
+    public void onItemSelected(AdapterView<?> parent, View view,
+                               int pos, long id) {
+        // An item was selected. You can retrieve the selected item using
+        // parent.getItemAtPosition(pos)
     }
 
     public void setError(String error) {
@@ -122,11 +141,6 @@ public class PaymentTypeDialog extends Dialog {
 
         public Builder setHeaderImg(@DrawableRes int headerRes) {
             dialog.imgHeader.setImageResource(headerRes);
-            return this;
-        }
-
-        public Builder setTitleImg(@DrawableRes int titleRes) {
-            dialog.imgTitle.setImageResource(titleRes);
             return this;
         }
 
